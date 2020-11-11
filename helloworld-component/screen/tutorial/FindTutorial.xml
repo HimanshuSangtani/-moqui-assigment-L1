@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd">
+    <actions>
+        <entity-find entity-name="helloworld-component.Example" list="tutorialList">
+            <search-form-inputs/></entity-find>
+    </actions>
+    <widgets>
+        <form-list name="ListTutorials" list="tutorialList" header-dialog="true" skip-form="true">
+    <auto-fields-entity entity-name="helloworld-component.Example" field-type="find-display"/>
+    <field name="description">
+        <header-field show-order-by="true"><text-find hide-options="true"/></header-field>
+        <default-field><display/></default-field>
+    </field>
+    <transition name="createTutorial">
+    <service-call name="create#helloworld-component.Example"/>
+    <default-response url="."/>
+</transition>
+<container-dialog id="CreateTutorialDialog" button-text="Create Tutorial">
+    <form-single name="CreateTutorial" transition="createTutorial">
+        <auto-fields-entity entity-name="helloworld-component.Example" field-type="edit"/>
+        <field name="submitButton"><default-field title="Create"><submit/></default-field></field>
+    </form-single>
+</container-dialog>
+</form-list>
+    </widgets>
+</screen>
