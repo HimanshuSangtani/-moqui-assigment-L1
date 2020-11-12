@@ -5,8 +5,8 @@
         <field name="exampleId" type="id" is-pk="true" />
         <field name="exapleName" type="text-medium" />
         <field name="exampleDate" type="date-time" />
-        <field name="examplePrice" type="id" />
-        <field name="exampleQuantity" type="text-medium" />
+        <field name="examplePrice" type="number-integer" />
+        <field name="exampleQuantity" type="number-decimal" />
         <field name="description" type="text-medium"/>
     </entity>
 </entities>
