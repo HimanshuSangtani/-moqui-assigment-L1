@@ -1,5 +1,5 @@
 # Moqui-Entity
-##Steps
+## Steps
 * Open a Terminal window
 * Go to ~/sandbox (or create the development directory)
 * Clone the Moqui framework repository
